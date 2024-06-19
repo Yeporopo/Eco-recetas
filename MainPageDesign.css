@@ -1,8 +1,11 @@
+/* Reset margins and padding */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+/* Banner styling */
 #banner {
     transition: height ease 0.3s;
     background-color: #000000;
@@ -10,55 +13,98 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 20%;
+    height: 20vh; /* Use vh for height to be responsive */
 }
 
-h1{ font-size: 50px; text-align: center; color: #ffffff;}
+/* Banner heading styling */
+h1 { 
+    font-size: 6vw; /* Use vw for font-size to be responsive */
+    text-align: center; 
+    color: #ffffff;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    font-family: Garamond;
+    font-style: italic; 
+    font-weight: bold; 
+    letter-spacing: 0.4mm;
+}
 
+/* Banner hover effect */
 #banner:hover {
-    height: 30%;
+    height: 30vh; /* Use vh for height to be responsive */
 }
 
+/* Main body positioning when banner is hovered */
 #banner:hover + #mainbody {
-    top: 30%;
+    top: 30vh; /* Use vh for height to be responsive */
 }
 
+/* Main body styling */
 #mainbody {
     transition: top ease 0.3s;
     background-color: #ffffff;
     position: absolute;
-    top: 20%;
+    top: 20vh; /* Use vh for height to be responsive */
     left: 0;
     width: 100%;
-    height: calc(100% - 20%);
+    height: calc(100vh - 20vh); /* Calculate height based on viewport height */
 }
 
+#titlediv {
+    position: absolute;
+    top: 0vh; 
+    left: 0vh;
+    height: 11vh; 
+    width: 100vw; /* Use vw for width to be responsive */
+}
+
+#searchbardiv {
+    position: absolute;
+    top: 11vh; /* Adjusted to match the bottom of titlediv */
+    left: 0vh;
+    height: 11vh; 
+    width: 100vw; /* Use vw for width to be responsive */
+}
+
+/* Search bar styling */
 #searchybar {
-    height: 5%; 
-    width: 25%; 
+    height: 5vh; /* Use vh for height to be responsive */
+    width: 70vw; /* Use vw for width to be responsive */
     position: absolute; 
-    top: 20%; left: 50%; 
-    transform: translateX(-50%); 
+    top: 50%; /* Center vertically within parent */
+    left: 50%; 
+    transform: translate(-50%, -50%); /* Center horizontally */
     border: #000000 1px solid; 
     border-radius: 3em; 
     background-color: #fff; 
-    padding-left: 20px; padding-right: 20px; 
-    font-family:'Courier New', Courier, monospace;
-    font-size: 25px; 
+    padding-left: 20px; 
+    padding-right: 20px; 
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 4vw; /* Use vw for font-size to be responsive */
     font-weight: bold;
     z-index: 1; 
     text-align: left; 
-    transition: all ease .3s;}
+    transition: all ease 0.3s;
+}
 
-    #searchybar:hover {width: 35%;}
+/* Search bar hover effect */
+#searchybar:hover {
+    width: 80vw; /* Use vw for width to be responsive */
+}
 
-    h1 {    
-        position: absolute;
-        top: 7%; left: 50%; transform: translateX(-50%);
-        text-align: center;
-        font-family: Garamond;
-        font-style: italic; font-weight: bold; letter-spacing: .4mm;
-        font-size: 70px;
-        letter-spacing: .4mm;
-        color: #000000;
+/* Responsive adjustments with media queries */
+@media (max-width: 600px) {
+    /* Adjust font-size for smaller screens */
+    h1 {
+        font-size: 8vw; /* Larger font size for small screens */
     }
+    #searchybar {
+        font-size: 5vw; /* Larger font size for small screens */
+        width: 80vw; /* Wider search bar on small screens */
+    }
+    #searchybar:hover {
+        width: 90vw; /* Even wider on hover for small screens */
+    }
+}

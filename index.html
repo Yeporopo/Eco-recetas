@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recetas sostenibles</title>
     <link rel="stylesheet" href="MainPageDesign.css" type="text/css">
-</head>
-<body>
+  </head>
+  <body>
     <div id="banner">
     </div>
     <div id="mainbody">
+      <div id="titlediv">
         <h1>Por un bien mayor.</h1>
+      </div>
+      <div id="searchbardiv">
         <input type="text" name="hi" id="searchybar" placeholder="Busque su receta">
+      </div>
     </div>
-</body>
+  </body>
 </html>
 
 <script>
@@ -44,4 +48,12 @@
   searchbar.addEventListener('input', function() {
     updateWidth();
   });
+
+
+  searchbar.addEventListener('input', function() {
+            if (searchbar.value === "pene") {
+                alert(".");
+                searchbar.value = ""; // Clear the input
+            }
+        });
 </script>
