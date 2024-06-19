@@ -1,59 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recetas sostenibles</title>
-    <link rel="stylesheet" href="MainPageDesign.css" type="text/css">
-  </head>
-  <body>
-    <div id="banner">
-    </div>
-    <div id="mainbody">
-      <div id="titlediv">
-        <h1>Por un bien mayor.</h1>
-      </div>
-      <div id="searchbardiv">
-        <input type="text" name="hi" id="searchybar" placeholder="Busque su receta">
-      </div>
-    </div>
-  </body>
+    <title>Document</title>
+</head>
+<body>
+        <div class="header"></div>
+</body>
 </html>
-
-<script>
-  var searchbar = document.getElementById('searchybar');
-
-  // Function to update the width based on the input's value
-  function updateWidth() {
-    if (searchbar.value !== '') {
-      searchbar.style.width = '35%';
-    } else {
-      searchbar.style.width = '25%';  // Default width when empty
-    }
-  }
-
-  // Initial width check
-  updateWidth();
-
-  // Add event listeners for focus and blur to update the width dynamically
-  searchbar.addEventListener('focus', function() {
-    searchbar.style.width = '35%';
-  });
-
-  searchbar.addEventListener('blur', function() {
-    updateWidth();
-  });
-
-  // Add an event listener to update the width when the input value changes
-  searchbar.addEventListener('input', function() {
-    updateWidth();
-  });
-
-
-  searchbar.addEventListener('input', function() {
-            if (searchbar.value === "pene") {
-                alert("¿A poco muy chistoso?");
-                searchbar.value = ""; // Clear the input
-            }
-        });
-</script>

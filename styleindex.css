@@ -1,0 +1,6 @@
+* {padding: 0%; margin: 0%;}
+
+.header {
+    background-image: url('Design/header0001-0100.gif');
+    height: 30vh; width: 100vh;
+}
